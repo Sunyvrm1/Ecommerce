@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            Orange1: 'hsl(26, 100%, 55%)',
+            Paleorange: 'hsl(25, 100%, 94%)',
+            Verydarkblue: 'hsl(220, 13%, 13%)',
+            Lightgrayishblue: 'hsl(220, 13%, 13%)'
+          }
+        },
+      }
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- Header starts -->
+
+  <header class="px-[20px] my-0 mx-auto border-b border-[Lightgrayishblue] border-solid py-[4%]
+  flex sm:w-11/12 sm:px-[0] sm:py-[0]
+  lg:w-10/12 lg:px-[0] sm:py-[0] header">
+  <div class="navIcon">
+    <ion-icon name="menu-outline" class="navIconMenu"></ion-icon>
+    <ion-icon name="close-outline" class="navIconMenu"></ion-icon>
+  </div>
+    <div class="flex flex-row basis-3/5 gap-12 items-center"> 
+      <img src="/images/logo.svg" alt="">
+      <nav id="nav" class="absolute bg-[white] top-0 left-0 h-screen w-3/5 px-[20px]
+      sm:static sm:bg-transparent sm:w-full sm:h-[100%] sm:px-[0]">
+        <ul class="flex gap-[20px] flex-col mt-[70px]
+        sm:flex-row sm:gap-5 sm:mt-[0]">
+          <li class="py-[0] text-[grey] hover:text-[black] cursor-pointer
+          sm:py-[30px] sm:border-b-4 sm:border-white sm:border-solid sm:hover:border-Orange1"><a href="#">Collections</a></li>
+          <li class="py-[0px] text-[grey] hover:text-[black] cursor-pointer
+          sm:py-[30px] sm:border-b-4 sm:border-white sm:border-solid sm:hover:border-Orange1"><a href="#">Men</a></li>
+          <li class="py-[0px] text-[grey] hover:text-[black] cursor-pointer
+          sm:py-[30px] sm:border-b-4 sm:border-white sm:border-solid sm:hover:border-Orange1"><a href="#">Women</a></li>
+          <li class="py-[0px] text-[grey] hover:text-[black] cursor-pointer
+          sm:py-[30px] sm:border-b-4 sm:border-white sm:border-solid sm:hover:border-Orange1"><a href="#">About</a></li>
+          <li class="py-[0px] text-[grey] hover:text-[black] cursor-pointer
+          sm:py-[30px] sm:border-b-4 sm:border-white sm:border-solid sm:hover:border-Orange1"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex basis-2/5 items-center justify-end gap-7">
+      <div class="relative">
+      <img src="/images/icon-cart.svg" alt="" class="cursor-pointer" id="cart">
+      <p class="text-[10px] bg-Orange1 text-[white] px-[8px] rounded-full absolute top-[-7px] right-[-7px]" id="cartNumber">0</p>
+      <div class="shadow-lg bg-white absolute rounded-lg top-[40px] left-[-260px] w-[350px] opacity-0" id="cartBox">
+        <p class="p-[15px] border-b border-[Lightgrayishblue] border-solid font-bold">Cart</p>
+        <div class="p-[15px]">
+          <div class="flex items-center gap-3">
+            <img src="/images/image-product-1-thumbnail.jpg" alt="" class="w-2/12 rounded-md">
+            <p class="w-9/12 text-[grey]"><span>Fall Limited Edition Sneakers</span>
+            <br>
+            <span>$125.00 x </span><span id="checkNumber">0</span><span class="font-bold text-[black]"> $</span><span class="font-bold text-[black]" id="checkAmount">0</span><span class="font-bold text-[black]">.00 </span>
+            </p>
+            <img src="/images/icon-delete.svg" alt="" class="w-1/12 cursor-pointer w-[20px]" id="deleteBtn">
+          </div>
+          <button class="py-[8px] bg-Orange1 text-[white] font-semibold rounded w-full mt-4">Checkout</button>
+        </div>
+
+      </div>
+    </div>
+      <img src="/images/image-avatar.png" alt="" class="w-[38px] rounded-full border-2 border-Orange1 border-solid cursor-pointer">
+    </div>
+  </header>
+
+  <!-- Header ends -->
+
+  <!-- products starts -->
+
+  <section class="my-0 mx-auto grid grid-cols-1 items-center px-[20px] gap-[0%]
+  sm:w-10/12 sm:px-[0] sm:grid sm:grid-cols-2 sm:gap-[8%]
+  lg:w-9/12 lg:px-[0] lg:grid sm:grid-cols-2 lg:gap-[8%]">
+    <div class="py-16">
+      <img src="/images/image-product-1.jpg" alt="image-product-1" class="rounded-lg" id="mainImage">
+      <div class="thumnbail grid grid-cols-4 gap-[20px] mt-[20px]">
+        <img src="/images/image-product-1.jpg" class="rounded-lg galleryImages cursor-pointer hover:opacity-50" alt="image-product-1">
+        <img src="/images/image-product-2.jpg" class="rounded-lg galleryImages cursor-pointer hover:opacity-50" alt="image-product-2">
+        <img src="/images/image-product-3.jpg" class="rounded-lg galleryImages cursor-pointer hover:opacity-50" alt="image-product-3">
+        <img src="/images/image-product-4.jpg" class="rounded-lg galleryImages cursor-pointer hover:opacity-50" alt="image-product-4">
+      </div>
+    </div>  
+    <div class="ml-auto pb-[60px]
+    sm:pb-[0]">
+      <p class="text-Orange1 font-bold tracking-wider mb-[15px]">SNEAKER COMPANY</p>
+      <p class="text-4xl font-bold mb-[30px]">Fall Limited Edition Sneakers</p>
+      <p class="mb-[20px] text-[grey]">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <p class="mb-[5px] text-2xl font-bold flex items-center">$125.00 <span class="ml-[15px] text-Orange1 text-[17px] bg-Paleorange px-[8px] py-[0px] rounded">50%</span></p>
+      <p class="text-[grey] font-semibold line-through">$250.00</p>
+      <div class="btn mt-8 flex gap-5">
+        <div class="btn1 flex basis-3/12 bg-gray-100 rounded px-[15px] items-center justify-between">
+          <span class="text-[20px] font-bold text-Orange1 cursor-pointer" id="minus">-</span>
+          <p class="font-bold" id="productNumber">0</p>
+          <span class="text-[20px] font-bold text-Orange1 cursor-pointer" id="plus">+</span>
+        </div>
+        <button class="py-[8px] bg-Orange1 text-[white] font-semibold rounded w-[50%]" id="cartBtn">Add to cart</button>
+      </div>
+    </div>  
+  </section>
+
+<script src="script.js"></script>
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+#cartNumber{
+  display: none;
+}
+.opac{
+  opacity: 1 !important;
+}
+.navIconMenu {
+  width: 2em;
+  height: 2em;
+  margin-right: 20px;
+}
+.navIconMenu[name="close-outline"] {
+  display: none;
+}
+.navIcon {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+@media(max-width:640px){
+nav{
+  transform: translateX(-100%);
+}
+.navIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 99;
+}
+.active #nav {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.active .navIcon .navIconMenu[name="close-outline"] {
+  display: block;
+}
+.active .navIcon .navIconMenu[name="menu-outline"] {
+  display: none;
+}
+}
